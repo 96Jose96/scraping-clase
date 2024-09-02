@@ -11,7 +11,7 @@ app.get('/', (req, res) => {
     axios.get(url).then((response) => {
         if (response.status === 200) {
             const html = response.data
-            const $ = cheerio.load(html)
+            const $ = cheerio.load(html)  //para que nos cargue el contenido
 
 //nos traemos de DOM el titulo de la pagina
             const pageTitle = $('title').text()
